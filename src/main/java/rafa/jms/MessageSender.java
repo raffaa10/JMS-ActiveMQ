@@ -7,6 +7,13 @@ import javax.jms.*;
 
 public class MessageSender {
 
+    /**
+     * ConnectionFactory ->  Connection ->  Session
+     * ->  Session -> Destination (Queue or Topic)
+     *     Session -> MessageProducer ->
+     * MessageProducer -> TextMessage
+     */
+
     private static String url = ActiveMQConnection.DEFAULT_BROKER_URL;
 
     private static String queueName = "MY_MESSAGE_QUEUE";
